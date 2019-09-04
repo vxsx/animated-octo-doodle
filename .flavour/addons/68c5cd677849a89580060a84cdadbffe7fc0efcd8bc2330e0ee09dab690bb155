@@ -1,0 +1,8 @@
+version: 0.1
+meta:
+  name: addons/aldryn-django
+  version: 1.11.20.1
+
+install:
+  artifact: https://control.dev.aldryn.net/api/v1/apps/serve/aldryn-django/1.11.20.1/81a21283-635d-457e-a4c0-668dff0a483a/aldryn-django-1.11.20.1.zip#egg=aldryn-django==1.11.20.1
+  addonname: aldryn-django

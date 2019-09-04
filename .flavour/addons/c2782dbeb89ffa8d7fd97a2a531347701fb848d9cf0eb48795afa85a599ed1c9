@@ -1,0 +1,8 @@
+version: 0.1
+meta:
+  name: addons/aldryn-sso
+  version: 1.5.1
+
+install:
+  artifact: https://control.dev.aldryn.net/api/v1/apps/serve/aldryn-sso/1.5.1/4e2eb564-fbf5-4d5f-96e0-4059f3185ffe/aldryn-sso-1.5.1.zip#egg=aldryn-sso==1.5.1
+  addonname: aldryn-sso

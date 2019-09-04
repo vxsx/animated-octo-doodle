@@ -1,0 +1,16 @@
+version: 0.1
+meta:
+  name: addons/aldryn-addons
+  version: 1.0.4
+
+install:
+  artifact: https://control.dev.aldryn.net/api/v1/apps/serve/aldryn-addons/1.0.4/5cc40a55-a1e5-4906-a8df-03a1029a62f5/aldryn-addons-1.0.4.zip#egg=aldryn-addons==1.0.4
+  addonname: aldryn-addons
+
+config:
+  enabled:
+    label: Enabled
+    required: True
+    type: "scalar/boolean"
+    default: false
+    variable: DEBUGBAR_ENABLED
