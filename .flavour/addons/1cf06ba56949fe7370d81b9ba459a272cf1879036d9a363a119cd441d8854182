@@ -8,9 +8,36 @@ install:
   addonname: aldryn-addons
 
 config:
-  enabled:
+  cache_driver: 
+    label: "Cache driver"
+    readonly: True
+    required: True
+    type: "scalar/string"
+    default: database
+    variable: RESPONSE_CACHE_DRIVER
+    helptext: Determines the driver being used for caching
+  cache_lifetime_in_seconds:
+    label: "Cache lifetime (in sec)"
+    required: False
+    type: "scalar/integer"
+    default: 604800
+    variable: RESPONSE_CACHE_LIFETIME
+    helptext: >
+      When using the default CacheRequestFilter this setting controls the
+      default number of seconds responses must be cached.
+  cache_time_header_name:
+    label: "Cache header name"
+    required: False
+    type: "scalar/string"
+    default: "laravel-responsecache"
+    variable: RESPONSE_CACHE_HEADER_NAME
+    helptext: >
+      This setting determines the name of the http header that contains
+      the time at which the response was cached
+  enabled: 
     label: Enabled
     required: True
     type: "scalar/boolean"
-    default: false
-    variable: DEBUGBAR_ENABLED
+    default: true
+    variable: RESPONSE_CACHE_ENABLED
+    helptext: Determine if the response cache middleware should be enabled.
